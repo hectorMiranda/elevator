@@ -1,0 +1,81 @@
+com.intellij.rt.execution.application.AppMain com.grindr.interview.Main
+Elevator Starting
+unprocesses requests (waiting people)
+4
+7
+6
+6
+2
+4
+4
+6
+1
+6
+Now at 1
+Passenger leaving elevator...
+1360875712: remaining requests for this elevator are
+4
+7
+6
+6
+Now at 2
+1360875712: remaining requests for this elevator are
+4
+7
+6
+6
+Now at 3
+Passenger leaving elevator...
+1360875712: remaining requests for this elevator are
+7
+6
+6
+Now at 4
+1360875712: remaining requests for this elevator are
+7
+6
+6
+Now at 5
+Passenger leaving elevator...
+Passenger leaving elevator...
+1360875712: remaining requests for this elevator are
+7
+Now at 6
+Passenger leaving elevator...
+1360875712: remaining requests for this elevator are
+Now at 1
+1625635731: remaining requests for this elevator are
+4
+4
+6
+6
+Now at 2
+1625635731: remaining requests for this elevator are
+4
+4
+6
+6
+Now at 3
+Passenger leaving elevator...
+Passenger leaving elevator...
+1625635731: remaining requests for this elevator are
+6
+6
+Now at 4
+1625635731: remaining requests for this elevator are
+6
+6
+Now at 5
+Passenger leaving elevator...
+Passenger leaving elevator...
+1625635731: remaining requests for this elevator are
+unprocesses requests (waiting people)
+4
+4
+6
+6
+request for Elevator 1360875712
+request for Elevator 1625635731
+null
+
+Process finished with exit code 0
