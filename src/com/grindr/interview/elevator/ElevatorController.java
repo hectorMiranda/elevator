@@ -1,8 +1,6 @@
 package com.grindr.interview.elevator;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
 
 public class ElevatorController {
 
@@ -11,7 +9,7 @@ public class ElevatorController {
     int numberOfFloors = 0;
     int capacity = 5; //ideally we would have multiple types of elevators with different capacities
 
-    ConcreteElevator[] elevators;
+    Elevator[] elevators;
     ArrayList<PassengerRequest> passengerRequests;
 
     public ArrayList<PassengerRequest> getRequests() {
@@ -31,10 +29,10 @@ public class ElevatorController {
         this.numberOfFloors = numberOfFloors;
         this.passengerRequests = new ArrayList<PassengerRequest>();
 
-        elevators = new ConcreteElevator[numberOfElevators];
+        elevators = new Elevator[numberOfElevators];
 
         for (int i=0;i<this.numberOfElevators;i++){
-            elevators[i] = new ConcreteElevator(numberOfFloors, capacity);
+            elevators[i] = new Elevator(numberOfFloors, capacity);
         }
     }
 
@@ -44,7 +42,7 @@ public class ElevatorController {
         if(passengerRequests.size()>0)
             return true;
 
-        for(ConcreteElevator elevator : elevators){
+        for(Elevator elevator : elevators){
             if(elevator.getPendingRequests().size()>0 ) {
                 returnValue = true;
                 break;
@@ -66,7 +64,7 @@ public class ElevatorController {
 
     public void printCurrentRequestBeingProcessed()
     {
-        for(ConcreteElevator elevator : elevators){
+        for(Elevator elevator : elevators){
             System.out.println("request for Elevator " + elevator.hashCode());
             for(PassengerRequest r : elevator.getPendingRequests())
                 System.out.println(r.getDestinationFloorNumber());
@@ -77,7 +75,7 @@ public class ElevatorController {
 
     public void step() {
         ArrayList<PassengerRequest> remainingRequest = new ArrayList<>();
-        for(ConcreteElevator e: elevators)
+        for(Elevator e: elevators)
         {
            for(PassengerRequest r : passengerRequests){
                if(r.getPickupFloorNumber() != e.getCurrentFloor() )
@@ -91,7 +89,7 @@ public class ElevatorController {
         }
 
 
-        for(ConcreteElevator e: elevators)
+        for(Elevator e: elevators)
             while(e.getPendingRequests().size()>0) {
                 e.elevatorStep();
             }

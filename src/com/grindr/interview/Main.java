@@ -7,7 +7,7 @@ import com.grindr.interview.elevator.*;
 
 public class Main {
 
-    ConcreteElevator elevator;
+    Elevator elevator;
     static final int NUMBER_OF_ELEVATORS = 2;
     static final int NUMBER_OF_FLOORS = 10;
     static final int PASSENGERS_TO_GENERATE = 10;

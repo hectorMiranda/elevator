@@ -4,7 +4,7 @@ import com.grindr.interview.*;
 import java.util.ArrayList;
 
 
-public class ConcreteElevator  {
+public class Elevator {
     private int currentFloor;
     private int numberOfFloors;
     private ElevatorDirection direction;
@@ -19,7 +19,7 @@ public class ConcreteElevator  {
         this.requests.add(request);
     }
 
-    public ConcreteElevator(int numberOfFloors, int capacity) {
+    public Elevator(int numberOfFloors, int capacity) {
         this.numberOfFloors = numberOfFloors;
         this.capacity = capacity;
         this.requests = new ArrayList<PassengerRequest>();
